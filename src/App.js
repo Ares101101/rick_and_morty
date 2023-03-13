@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom';
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
- 
+import Form from './components/Forms/Forms'; 
 function App () {
   const [characters, setCharacters] = useState([]);
   
@@ -27,7 +27,7 @@ function App () {
 
   return (
     <div className='App' style={{ padding: '25px' }}>
-      <NavBar onSearch={onSearch} />
+      { <Form/>? <NavBar onSearch={onSearch} />:""}
       <hr />
       <Routes>
         <Route path = "/about" element={<About/>} />
@@ -35,6 +35,7 @@ function App () {
           <Cards characters={characters} onClose={onClose} />
         } />
         <Route path='/detail/:detailID' element={<Detail/>} />
+        <Route path='/form' element={<Form/>}/>
       </Routes>
     </div>
   )

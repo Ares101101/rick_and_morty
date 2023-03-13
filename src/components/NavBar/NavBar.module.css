@@ -41,7 +41,7 @@
   float: left;
 }
 
-.button:hover:after {
+.button:focus:after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }

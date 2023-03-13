@@ -6,11 +6,11 @@ export default function SearchBar({onSearch}) {
    const handleChange = e =>{
       const{value} = e.target;
       console.log(value)
-      setCharacter(value);
-      
+      setCharacter(value);   
    }
-
-
+   const handleSubmit = () => {     
+      setCharacter("")
+   }
    return (
       <div>
         <input 
@@ -20,9 +20,13 @@ export default function SearchBar({onSearch}) {
         onChange={handleChange}
         className={styles.input}
         placeholder="Search.."
+        value={character}
         />
         <button 
-        onClick={()=>onSearch(character)}
+        onClick={()=>{
+         onSearch(character);
+         handleSubmit();
+      }}
         className={styles.button}
         >Agregar</button>
       </div>
