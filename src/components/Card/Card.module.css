@@ -1,0 +1,42 @@
+.conteiner{
+    border-radius: 1rem;
+    border: 0.15rem solid #1c04a759;
+    box-shadow: 0px 0px 5px 7px rgba(0,0,0,0.75);
+    width: 15rem;
+    padding: 10px;
+}
+.image{
+    width:15rem;  
+}
+.image img{
+    width: 15rem;
+    border-radius: 1rem;
+    padding: 0px;
+}
+.closeB{
+    display: flex;
+    justify-content: flex-end;
+}
+.closeB button{
+    background-color : salmon;
+    color: white;
+    border: 0px;
+    border-radius: 2px;
+}
+.dataCon{
+    text-align: center;
+    padding: 10px;
+
+}
+.dataCon h3{
+    margin: 2px;
+    font-size: 16px;
+    color: white;
+
+}
+.dataCon h4{
+    margin: 2px;
+    font-size: 16px;
+    color: white;
+    
+}
